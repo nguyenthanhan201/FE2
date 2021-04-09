@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bongbong {
+            position: relative;
+            bottom: -300px;
+            width: 100px;
+            height: 100px;
+            animation: 2s luonLach1 infinite reverse ease-in;
+        }
+        .bongbong::before {
+            content: " ";
+            width: 20px;
+            height: 20px;
+            background: blue;
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            animation: 2s luonLach2 infinite alternate-reverse linear;
+        }
+
+        @keyframes luonLach1 {
+            0% {
+                transform: translateY(-300px);
+            }
+            100% {
+                transform: translateY(1500px);
+            }
+        }
+
+        @keyframes luonLach2 {
+            33% {
+ transform: translateX(-50px);
+  }
+  66% {
+  transform: translateX(50px);
+  }
+        }
+        /* .bongbong:nth-child(1) {
+            left: 30px;
+            animation-delay: 1s;
+            animation-direction: 2s
+        }
+
+        .bongbong:nth-child(2) {
+            left: 80px;
+            animation-delay: 2s;
+            animation-delay: 1s
+        }
+
+        .bongbong:nth-child(3) {
+            left: 60px;
+            animation-delay: 1s;
+            animation-direction: 2s
+        }
+
+        .bongbong:nth-child(4) {
+            left: 100px;
+            animation-delay: 5s;
+            animation-direction: 2s
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="bongbong"></div>
+    <!-- <div class="bongbong"></div>
+    <div class="bongbong"></div>
+    <div class="bongbong"></div>
+    <div class="bongbong"></div> -->
+</body>
+
+</html>

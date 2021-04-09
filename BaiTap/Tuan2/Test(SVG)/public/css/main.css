@@ -1,0 +1,106 @@
+header.top-header{
+    background-image:url("../images/banner.jpg");
+    background-size: cover;
+    position: relative;
+    height: 700px;
+}
+.ware{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ware1{
+    position: absolute;
+bottom: 0;
+left: 0;
+}
+.ware1 path{
+    fill: white;
+}
+.ware path{
+fill: #008ec0;
+mix-blend-mode: multiply;
+}
+h1{
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    position: absolute; 
+    padding: 15px 32px;
+    background-color: yellow;
+    border-radius: 15px;
+}
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+.container{
+    margin-top: 0px;
+    position: absolute;
+}  
+button{
+    padding: 5px 20px;
+    height: 39px;
+    border-radius: 100px;
+    background-color: yellow;
+}
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color:rgb(126, 126, 110);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}

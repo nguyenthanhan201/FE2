@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .circle {
+      margin: auto;
+      margin-top: 300px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: skyblue;
+      /* box-shadow:  0 0 0 10px  white,
+    0 0 0 20px  white,
+    0 0 0 30px  white,
+    0 0 0 40px  white,
+    0 0 0 50px  white,
+    0 0 0 60px  white,
+    0 0 0 70px  red; */
+    }
+    .circle:hover {
+      /* cursor: pointer; */
+      animation: move 1s 1;
+    }
+
+    @keyframes move {
+      0% {
+        transform: scale(1);
+        box-shadow: 0px 0px 5px 5px RGBA(255, 0, 255, 0.16);
+      }
+
+      25% {
+        transform: scale(2);
+        box-shadow: 0px 0px 0px 80px RGBA(255, 0, 255, 0.16);
+        box-shadow:  0 0 0 10px  white,
+    0 0 0 20px  white,
+    0 0 0 30px  white,
+    0 0 0 40px  white,
+    0 0 0 50px  white,
+    0 0 0 60px  white,
+    0 0 0 80px  skyblue;
+      }
+
+      50% {
+        transform: scale(.5);
+        box-shadow: 0px 0px 0px 40px RGBA(255, 0, 255, 0.16);
+        box-shadow:  0 0 0 10px  white,
+    0 0 0 20px  white,
+    0 0 0 30px  white,
+    0 0 0 40px  skyblue,
+      }
+
+      75% {
+        transform: scale(2);
+        box-shadow: 0px 0px 0px 70px RGBA(255, 0, 255, 0.16);
+        box-shadow:  0 0 0 10px  white,
+    0 0 0 20px  white,
+    0 0 0 30px  white,
+    0 0 0 40px  white,
+    0 0 0 50px  white,
+    0 0 0 60px  white,
+    0 0 0 70px  skyblue;
+      }
+
+      100% {
+        transform: scale(1);
+        box-shadow: 0px 0px 0px 40px RGBA(255, 0, 255, 0.16);
+        box-shadow:  0 0 0 10px  white,
+    0 0 0 20px  white,
+    0 0 0 30px  white,
+    0 0 0 40px  skyblue,
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circle"></div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .background{
+            background: yellow;
+            width: 303px;
+    height: 304px;
+        }
+.a{
+    width: 100px;
+    height: 100px;
+    background: aqua;
+animation-name: moveX;
+animation-duration: 4s;/*thoi gian chuyen dong*/
+animation-iteration-count: infinite;/*lap lai khong gioi han*/
+position: relative;
+}
+@keyframes moveX{ /* tao ham chuyen dong*/
+    0%{
+        left: 0px;top: 0px;/*chuyen dong bat dau */
+        background: yellow;
+    }
+    25%{
+        left: 200px;top: 0px;
+        background: red;
+    }
+    50%{
+        left: 200px;top: 200px;
+        background: black;
+    }
+    75%{
+        left: 0px;top: 200px;
+        background: green;
+    }
+    100%{
+        left: 0px;top: 0px;
+        background: teal;
+        
+
+    }
+
+}
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="a">
+        </div>
+    </div>
+    
+</body>
+</html>

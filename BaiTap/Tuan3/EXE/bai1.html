@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai1</title>
+    <style>
+    .a{
+        background-color: red;
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        margin-left: 500px;
+        position: relative;
+        /* animation-duration: 2s;
+        animation-name: moveX;
+    animation-iteration-count: infinite; */
+    animation: 1s moveX alternate infinite ease-in;
+    }
+    .shadow{
+        position: absolute;
+        background: black;
+        width: 5%;
+        height: 3%;
+        border-radius: 70%;
+        margin-left: 490px;
+        margin-top: 500px;
+        animation: 1s shadow infinite alternate;
+    }
+    @keyframes moveX{
+        0%{
+            top: 0px;
+        }
+        95%{
+            top: 500px;
+        }
+        100%{
+            top: 510px;
+            transform: scale(1.5,0.9);
+        }
+    }
+    @keyframes shadow{
+        0%{
+        transform: scale(0);
+        }
+        95%{
+        transform: scale(1);
+        }
+        100%{
+        transform: scale(1);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+    <div class="shadow"></div>
+</body>
+</html>

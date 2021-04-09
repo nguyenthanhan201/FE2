@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .photo{
+        width: 400px;
+        position: relative;
+    }
+    .photo img{
+        width: 100%;
+    }
+    .photo::after{
+        content: "";
+position: absolute;
+top: 0;
+bottom: 0;
+width: 50px;
+background: white;
+left:-10px;
+background: linear-gradient(90deg,transparent,white,transparent);
+mix-blend-mode: overlay;
+animation: 1s moveSong linear infinite;
+    }
+    .photo:hover::after{
+      
+    }
+    @keyframes moveSong{
+0%{
+    transform: translateX(-10px);
+}
+100%{
+    transform: translateX(2000px);
+}
+    }
+</style>
+<body>
+    <div class="photo">
+        <img src="./tải xuống.jpg">
+    </div>
+</body>
+</html>
